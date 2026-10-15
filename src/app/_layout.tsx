@@ -1,15 +1,15 @@
 import "@/global.css";
-
-import { DarkTheme, DefaultTheme, ThemeProvider } from "expo-router";
-import { useColorScheme } from "react-native";
-
-import AppTabs from "@/components/app-tabs";
+import { Stack } from "expo-router";
+import { StatusBar } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <AppTabs />
-    </ThemeProvider>
+    <SafeAreaView className="flex-1 bg-white">
+      <StatusBar barStyle={"dark-content"} />
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      </Stack>
+    </SafeAreaView>
   );
 }

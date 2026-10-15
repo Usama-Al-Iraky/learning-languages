@@ -8,14 +8,12 @@
     "scheme": "languagesgiraffe",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "bundleIdentifier": "com.languagesgiraffe"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#47269D",
+        "foregroundImage": "./assets/images/adaptive-icon.png"
       },
       "predictiveBackGestureEnabled": false,
       "package": "com.languagesgiraffe"
@@ -25,9 +23,87 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#47269D",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 200
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "Graphik Arabic",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/font/GraphikArabic-Thin.ttf",
+                    "weight": 100
+                  },
+                  {
+                    "path": "./assets/font/GraphikArabic-Extralight.ttf",
+                    "weight": 200
+                  },
+                  {
+                    "path": "./assets/font/GraphikArabic-Light.ttf",
+                    "weight": 300
+                  },
+                  {
+                    "path": "./assets/font/GraphikArabic-Regular.ttf",
+                    "weight": 400
+                  },
+                  {
+                    "path": "./assets/font/GraphikArabic-Medium.ttf",
+                    "weight": 500
+                  },
+                  {
+                    "path": "./assets/font/GraphikArabic-Semibold.ttf",
+                    "weight": 600
+                  },
+                  {
+                    "path": "./assets/font/GraphikArabic-Bold.ttf",
+                    "weight": 700
+                  },
+                  {
+                    "path": "./assets/font/GraphikArabic-Black.ttf",
+                    "weight": 900
+                  }
+                ]
+              },
+              {
+                "fontFamily": "GraphikArabic-Super",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/font/GraphikArabic-Super.ttf",
+                    "weight": 400
+                  }
+                ]
+              },
+              {
+                "fontFamily": "Pusab",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/font/PUSAB.otf",
+                    "weight": 400
+                  }
+                ]
+              }
+            ]
+          },
+          "ios": {
+            "fonts": [
+              "./assets/font/GraphikArabic-Thin.ttf",
+              "./assets/font/GraphikArabic-Extralight.ttf",
+              "./assets/font/GraphikArabic-Light.ttf",
+              "./assets/font/GraphikArabic-Regular.ttf",
+              "./assets/font/GraphikArabic-Medium.ttf",
+              "./assets/font/GraphikArabic-Semibold.ttf",
+              "./assets/font/GraphikArabic-Bold.ttf",
+              "./assets/font/GraphikArabic-Black.ttf",
+              "./assets/font/GraphikArabic-Super.ttf",
+              "./assets/font/PUSAB.otf"
+            ]
+          }
         }
       ]
     ],
