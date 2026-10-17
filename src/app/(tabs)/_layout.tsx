@@ -1,13 +1,19 @@
 import { colors } from "@/constants";
 import {
   IconChartLine,
-  IconHomeFilled,
+  IconHome,
   IconMessage2,
 } from "@tabler/icons-react-native";
-import { Tabs } from "expo-router";
+import { Redirect, Tabs } from "expo-router";
 import { StyleSheet, View } from "react-native";
 export default function TabLayout() {
   const iconSize = 30;
+  const logIn = false;
+
+  if (logIn) {
+    return <Redirect href="/auth" />;
+  }
+
   return (
     <Tabs
       screenOptions={{
@@ -27,7 +33,7 @@ export default function TabLayout() {
           },
           tabBarIcon: ({ color }) => (
             <View className="h-full items-center justify-center">
-              <IconHomeFilled size={iconSize} color={color} />
+              <IconHome size={iconSize} color={color} />
             </View>
           ),
         }}
@@ -39,9 +45,9 @@ export default function TabLayout() {
           tabBarIcon: () => (
             <View
               style={{ elevation: 8 }}
-              className="size-24 rounded-full justify-center items-center -top-5 border-4 border-white bg-primary shadow "
+              className="size-20 rounded-full justify-center items-center -top-5 border-4 border-white bg-primary shadow "
             >
-              <IconMessage2 color={colors.white} size={45} strokeWidth={2.2} />
+              <IconMessage2 color={colors.white} size={40} strokeWidth={1.5} />
             </View>
           ),
         }}
@@ -67,7 +73,7 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   tabBar: {
     position: "absolute",
-    width: "75%",
+    width: "65%",
     start: "50%",
     transform: [{ translateX: "-50%" }],
     bottom: 20,
